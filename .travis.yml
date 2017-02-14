@@ -1,9 +1,12 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode8.1
 before_install: true
 install: true
 git:
   submodules: false
+branches:
+  only:
+    - master
 before_script:
   - git submodule update --init --recursive
 script:
@@ -55,6 +58,11 @@ matrix:
         - carthage build --no-skip-current --platform watchOS
       env:
         - JOB=CARTHAGE-watchOS
+    - script:
+      - pod repo update --silent
+      - pod lib lint ReactiveObjC.podspec
+      env:
+        - JOB=PODSPEC
 notifications:
   email: false
   slack:

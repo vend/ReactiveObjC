@@ -8,12 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class RACSignal;
+@class RACSignal<__covariant ValueType>;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface NSText (RACSignalSupport)
 
 /// Returns a signal which sends the current `string` of the receiver, then the
 /// new value any time it changes.
-- (RACSignal *)rac_textSignal;
+- (RACSignal<NSString *> *)rac_textSignal;
 
 @end
+
+NS_ASSUME_NONNULL_END

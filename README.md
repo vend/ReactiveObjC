@@ -494,7 +494,7 @@ To add RAC to your application:
 
  1. Add the ReactiveObjC repository as a submodule of your application's
     repository.
- 1. Run `script/bootstrap` from within the ReactiveObjC folder.
+ 1. Run `git submodule update --init --recursive` from within the ReactiveObjC folder.
  1. Drag and drop `ReactiveObjC.xcodeproj` into your
     application's Xcode project or workspace.
  1. On the "Build Phases" tab of your application target, add RAC to the "Link
@@ -533,7 +533,6 @@ are some resources related to FRP:
 * [What is FRP? - Elm Language](http://elm-lang.org/learn/What-is-FRP.elm)
 * [What is Functional Reactive Programming - Stack Overflow](http://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631)
 * [Specification for a Functional Reactive Language - Stack Overflow](http://stackoverflow.com/questions/5875929/specification-for-a-functional-reactive-programming-language#5878525)
-* [Escape from Callback Hell](http://elm-lang.org/learn/Escape-from-Callback-Hell.elm)
 * [Principles of Reactive Programming on Coursera](https://www.coursera.org/course/reactive)
 
 [ReactiveCocoa]: https://github.com/ReactiveCocoa/ReactiveCocoa
